@@ -1,0 +1,143 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %} Sign Up || إنشاء حساب {% endblock title %}
+
+
+{% block body %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('../../../static/images/bg_2.jpg');"
+             data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate mb-5 text-center">
+                    <p class="breadcrumbs mb-0"><span class="mr-2"><a href="{% url 'home_page' %}">الرئيسية <i
+                            class="fa fa-chevron-right"></i></a></span> <span> تسجيل حساب جديد <i
+                            class="fa fa-chevron-right"></i></span></p>
+                    <h2 class="mb-0 bread">تسجيل حساب جديد</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper px-md-4">
+                        <div class="row mb-5">
+                         <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-map-marker"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>العنوان:</span> الجامعة بجوار مستشفى الغزالى - قناة السويس الرئيسي المنصورة الدقهلية</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-phone"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>رقم التليفون:</span> <a href="tel://+201097547000">+20 1097547000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-paper-plane"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>البريد الإلكتروني:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-globe"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>الموقع الإلكتروني:</span> <a href="#">yoursite.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">تسجيل حساب جديد</h3>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="fist_name"> الإسم الأول</label>
+                                                    <input type="text" class="form-control" name="first_name" id="fist_name"
+                                                           placeholder="الإسم الأول">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="last_name">إسم العائلة</label>
+                                                    <input type="text" class="form-control" name="last_name" id="last_name"
+                                                           placeholder="إسم العائلة ">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">البريد الإلكتروني </label>
+                                                    <input type="email" class="form-control" name="email" id="email"
+                                                           placeholder="البريد الإلكتروني">
+                                                </div>
+                                            </div>
+                                                                                        <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="password">الرقم السري</label>
+                                                    <input type="password" class="form-control" name="password" id="password"
+                                                           placeholder="الرقم السري">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="subject">رقم التليفون</label>
+                                                    <input type="number" class="form-control" name="phone" id="phone"
+                                                           placeholder="رقم التليفون">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="address">العنوان</label>
+                                                    <textarea name="address" class="form-control" id="address" cols="30"
+                                                              rows="4" placeholder="العنوان"></textarea>
+                                                </div>
+                                            </div>
+                                                                                    <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="تسجيل حساب جديد" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 order-md-first d-flex align-items-stretch">
+                                <div class="map">
+                                    <img class="img-fluid" style="width: 29rem;height: 101vh;" src="{% static 'images/about.jpg' %}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}
